@@ -2,6 +2,7 @@ const express = require('express');
 const app=express();
 const bodyParser=require('body-parser');
 const ejs =require('ejs');
+const _ =require('lodash');
 
 //database stuff
 const mongoose=require('mongoose');
@@ -37,7 +38,7 @@ app.set("view engine",'ejs');
 
 //handles the get requesst to the homepage and populates the homepage with the database content
 app.get('/',(req,res)=>{
-    
+
     Post.find((err,posts)=>{
         if (err) console.log(err);
         else {
@@ -56,9 +57,22 @@ app.get('/create',(req,res)=>{
 })
 
 
+app.get('/posts/:postId',(req,res)=>{
+    let pId=req.params.postId;
+
+   
+    
+    Post.findOne({title:pId},(err,post)=>{
+        if(err) res.render('post',{title:'oops ....',content:'Page Not found'})
+        res.render('post',{title:post.title,content:post.content});
+    });
+
+
+})
+
 app.post('/create',(req,res)=>{
 
-    let title=req.body.title;
+    let title=_.lowerCase(req.body.title);
     let content=req.body.content;
 
     let post=new Post({
@@ -66,10 +80,8 @@ app.post('/create',(req,res)=>{
         content:content
     });
 
-
     post.save();
     res.redirect('/');
-
 })
 
 app.listen(3000,()=>{
