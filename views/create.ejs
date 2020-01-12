@@ -1,5 +1,21 @@
 <%- include('partials/header') -%>
+<div class="container">
+    <h2 id="heading1">Create The Post</h2>
+    <br>
+    <form action="/create" method="post">
+        
+        <div class="form-group">
+            <label for="PostTitle">Post Title</label>
+            <input type="text" name="title" class="form-control" autocomplete="off"/>
+        </div>
 
-    
-
+        <div class="form-group">
+            <label for="PostTitle">Post Title</label>
+            <textarea type="text" name="content" class="form-control" rows="20" autocomplete="off" ></textarea>
+        </div>
+     <div class="text-center">   
+    <button type="submit" class="btn-lg btn-danger">Submit</button> 
+</div>
+    </form>
+</div>
 <%- include('partials/footer') -%>

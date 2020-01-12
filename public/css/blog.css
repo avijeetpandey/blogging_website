@@ -21,6 +21,10 @@
     font-family: 'Itim', cursive;
 }
 
+#heading1{
+    font-size: 34px;
+    font-family: 'Itim', cursive;
+}
 
 .navbar-nav  li a:hover {
     color: #1abc9c !important;
@@ -43,4 +47,11 @@
 	margin-top: 25px;
 	font-size: 12px;
   color: #fff;
+}
+
+
+/* css for the create post file */
+
+.btn-lg{
+    border:none;
 }
