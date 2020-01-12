@@ -12,5 +12,16 @@ User can create post and publish It .
 User can view the published post under the recent post section
 (Thanks to mongoDB)
 ```
-### some screenshots of the screens of the blog App
+## Some screenshots of the screens of the blog App
+### Home Screen
 ![DEMO IMAGE](screenshots/home.png)
+
+### Create POst Screen
+![DEMO IMAGE](screenshots/create.png)
+
+### View Post Screen
+![DEMO IMAGE](screenshots/posts.png)
+
+
+
+# Thank you !
