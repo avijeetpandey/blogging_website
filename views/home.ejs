@@ -21,10 +21,11 @@
         <% posts.forEach((post)=>{ %>
         <div class="content">
            <h3 class="title-text text-center"> <%= post.title %> </h3>
-           <p class="p-text text-center"> <%= post.content.substring(0,200) %> <a href="">Read More....</a> </p>
+           <p class="p-text text-center"> <%= post.content.substring(0,200) %> <a href="posts/<%=post.title %>">Read More....</a> </p>
         </div> 
        <% }); %>
 
 
     </div>
-    
+
+<%- include('partials/footer') -%>
