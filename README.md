@@ -16,7 +16,7 @@ User can view the published post under the recent post section
 ### Home Screen
 ![DEMO IMAGE](screenshots/home.png)
 
-### Create POst Screen
+### Create Post Screen
 ![DEMO IMAGE](screenshots/create.png)
 
 ### View Post Screen
