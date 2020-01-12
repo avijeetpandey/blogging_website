@@ -1,0 +1,29 @@
+{
+  "name": "bloggy",
+  "version": "1.0.0",
+  "description": "A fully fledged blog app made using node and express ",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "bloggy"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "express",
+    "blogApp",
+    "mongodb"
+  ],
+  "author": "Avijeet Pandey",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.8.7"
+  }
+}
