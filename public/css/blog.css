@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Itim&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -59,4 +59,39 @@
 img{
     height:400px;
     width:auto;
+}
+.img-container{
+    padding-top: 8%;
+}
+
+.text{
+    font-family: 'Itim', cursive;
+   font-size: 41px;
+   border-bottom: 3px solid black;
+}
+
+.title-text{
+    font-family: 'Itim', cursive;
+    font-size: 28px;
+}
+
+.text-container{
+   font-family: 'Itim', cursive;
+   font-size: 32px;
+   padding-top:15%;
+}
+
+.content{
+    border-radius:12px;
+    background-color: rgb(75, 221, 100);
+    padding:20px;
+    margin-bottom:10px;
+    font-family: 'Courier Prime', monospace;
+    font-weight: bold;
+    
+}
+
+.c-container{
+    max-width:1000px;
+
 }

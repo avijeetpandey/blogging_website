@@ -10,7 +10,6 @@ const mongoose=require('mongoose');
 const url="mongodb://localhost:27017/postsDB";
 mongoose.connect(url,{useNewUrlParser:true,useUnifiedTopology:true});
 
-
     
 //new schema for the database
 const postSchema=new mongoose.Schema({
@@ -27,12 +26,24 @@ const postSchema=new mongoose.Schema({
 //making model for the database 
 const Post=new mongoose.model('post',postSchema);
 
+
+//using bodyparser and declaring the express public static folder for assets and images
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
+
+//setting the ejs as default templating engine for the express
 app.set("view engine",'ejs');
 
+
+//handles the get requesst to the homepage and populates the homepage with the database content
 app.get('/',(req,res)=>{
-    res.render('home');
+    
+    Post.find((err,posts)=>{
+        if (err) console.log(err);
+        else {
+            res.render('home',{posts:posts});
+        }
+    });
 })
 
 
@@ -57,7 +68,6 @@ app.post('/create',(req,res)=>{
 
 
     post.save();
-
     res.redirect('/');
 
 })

@@ -3,9 +3,28 @@
     <!-- code related to the main header section -->
     <!--Some Illustrations-->
     <div class="container">
-        <img src="illustrationpng.png"  alt="Blog Image" />
+        <div class="row">
+        <div class="col-sm-6 img-container"> 
+            <img src="illustrationpng.png"  alt="Blog Image" />
+        </div>
+       <div class="col-sm-6 text-container text-center">
+        <p>Give your thoughts , Wings !</p>
+        <p>Publish, and share !</p>
+        <a  href="/create" class="btn-lg btn-danger">Publish</a>
+       </div>
+    </div> 
+    </div>
+    <!--Post Section-->
+    <p class="text-center text">Recent Posts</p>
+
+    <div class="container c-container">
+        <% posts.forEach((post)=>{ %>
+        <div class="content">
+           <h3 class="title-text text-center"> <%= post.title %> </h3>
+           <p class="p-text text-center"> <%= post.content.substring(0,200) %> <a href="">Read More....</a> </p>
+        </div> 
+       <% }); %>
+
+
     </div>
     
-    <!--Post Section-->
-
-<%- include('partials/footer') -%>
