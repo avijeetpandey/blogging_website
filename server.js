@@ -12,6 +12,14 @@ app.get('/',(req,res)=>{
 })
 
 
+app.get('/about',(req,res)=>{
+    res.render('about');
+});
+
+app.get('/create',(req,res)=>{
+    res.render('create');
+})
+
 app.listen(3000,()=>{
     console.log("The server is up and running on port 3000");
 })
