@@ -58,6 +58,8 @@ app.post('/create',(req,res)=>{
 
     post.save();
 
+    res.redirect('/');
+
 })
 
 app.listen(3000,()=>{
