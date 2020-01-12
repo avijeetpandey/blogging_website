@@ -6,7 +6,7 @@
 > #### MongoDB
 
 
-### Some Features of the App (not responsive for mobile 😔)
+### Some Features of the App (not responsive for mobile 😔 will implement soon)
 ```
 User can create post and publish It .
 User can view the published post under the recent post section
